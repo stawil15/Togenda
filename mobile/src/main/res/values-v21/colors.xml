@@ -174,4 +174,7 @@
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
 
+    <color name="primary">#33B5E5</color>
+    <color name="dark">#0099CC</color>
+
 </resources>

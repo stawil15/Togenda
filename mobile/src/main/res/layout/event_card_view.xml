@@ -19,33 +19,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_vertical"
-            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="20dp" >
+            android:background="@drawable/circle"
+            android:weightSum="1">
 
             <TextView
                 android:id="@+id/DayAbrevLabel"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/White"
                 android:textSize="15sp"
-                android:text="SUN" />
+                android:text="SUN"
+                android:gravity="bottom|center"
+                android:layout_weight="0.50" />
 
             <TextView
                 android:id="@+id/DayNumLabel"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/White"
-                android:text="01" />
+                android:text="01"
+                android:gravity="top|center" />
 
         </LinearLayout>
 
@@ -57,7 +61,8 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="10"
             android:textColor="@color/White"
-            android:text="Event Title" />
+            android:text="Event Title"
+            android:paddingLeft="10dp" />
 
     </LinearLayout>
 
