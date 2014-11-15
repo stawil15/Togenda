@@ -7,13 +7,18 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -162,6 +167,7 @@ public class MainActivity extends Activity
     private static  List<EventCardInfo> getCards() {
 
         List<EventCardInfo> result = new ArrayList<EventCardInfo>();
+
         for (int i=1; i <= 30; i++) {
             EventCardInfo ci = new EventCardInfo();
             ci.name = "test" + i;

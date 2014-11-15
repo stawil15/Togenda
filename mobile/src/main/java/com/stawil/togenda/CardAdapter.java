@@ -49,4 +49,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ContactViewHol
             description = (TextView)  v.findViewById(R.id.description);
         }
     }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public TextView mTextView;
+        public ViewHolder(TextView v) {
+            super(v);
+            mTextView = v;
+        }
+    }
 }
