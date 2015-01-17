@@ -168,7 +168,7 @@ public class MainActivity extends Activity
 
         List<EventCardInfo> result = new ArrayList<EventCardInfo>();
 
-        for (int i=1; i <= 30; i++) {
+        for (int i=1; i <= 10; i++) {
             EventCardInfo ci = new EventCardInfo();
             ci.name = "test" + i;
             ci.description = "description";
