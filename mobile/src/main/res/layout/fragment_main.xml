@@ -15,11 +15,18 @@
         android:background="@color/White"
         android:layout_gravity="center_horizontal" />
 
+    <LinearLayout
+        android:layout_width="75dp"
+        android:layout_height="125dp"
+        android:layout_gravity="bottom|right"
+        android:orientation="vertical">
+
     <com.shamanland.fab.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:paddingBottom="50dp"
-        android:paddingRight="50dp" />
+        android:layout_gravity="top|left"
+        android:src="@drawable/ic_action_new"
+        android:background="@android:color/background_dark" />
+    </LinearLayout>
 
 </FrameLayout>
