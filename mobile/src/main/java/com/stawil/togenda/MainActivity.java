@@ -48,7 +48,7 @@ public class MainActivity extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-        getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
     }
 
@@ -169,7 +169,7 @@ public class MainActivity extends Activity
 
         List<EventCardInfo> result = new ArrayList<EventCardInfo>();
 
-        for (int i=1; i <= 10; i++) {
+        for (int i=1; i <= 60; i++) {
             EventCardInfo ci = new EventCardInfo();
             ci.name = "test" + i;
             ci.description = "description";

@@ -1,5 +1,10 @@
 package com.stawil.togenda;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +27,20 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolde
     }
 
     @Override
-    public void onBindViewHolder(EventViewHolder contactViewHolder, int i) {
+    public void onBindViewHolder(EventViewHolder eventViewHolder, int i) {
+
         EventCardInfo ci = eventList.get(i);
-        contactViewHolder.name.setText(ci.name);
-        contactViewHolder.description.setText(ci.description);
+        eventViewHolder.name.setText(ci.name);
+        eventViewHolder.description.setText(ci.description);
+        View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);
+        //cv.setBackgroundColor(Color.GREEN);
+
+        //Color color = cv.getBackground();
+        //cc.setBackgroundColor();
+
+
+        //eventViewHolder.
+        //rl = (RelativeLayout) this.findViewById(R.id.rellay);
 
 //        if ( == eventList.size() - 1 && mCurrentPage <= mTotalPageCount) {
 ////            if (mCurrentPage == mTotalPageCount) {
