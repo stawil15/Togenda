@@ -33,7 +33,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolde
         eventViewHolder.name.setText(ci.name);
         eventViewHolder.description.setText(ci.description);
         View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);
-        //cv.setBackgroundColor(Color.GREEN);
+        //cv.setBackgroundColor(Color.RED);
 
         //Color color = cv.getBackground();
         //cc.setBackgroundColor();
