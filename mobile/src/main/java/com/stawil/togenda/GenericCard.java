@@ -1,11 +1,9 @@
 package com.stawil.togenda;
 
-import android.graphics.Color;
-
 /**
- * Created by Saeed Tawil on 11/11/2014.
+ * Created by saeed on 1/20/15.
  */
-public class EventCardInfo {
+public class GenericCard {
     protected String name;
     protected String description;
     protected int color;

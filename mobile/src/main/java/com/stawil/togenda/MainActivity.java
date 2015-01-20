@@ -5,11 +5,9 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,10 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
-import java.text.Format;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -170,12 +165,12 @@ public class MainActivity extends Activity
         }
     }
 
-    private static List<EventCardInfo> getCards() {
+    private static List<EventCard> getCards() {
 
-        List<EventCardInfo> result = new ArrayList<EventCardInfo>();
+        List<EventCard> result = new ArrayList<EventCard>();
 
         for (int i=1; i <= 60; i++) {
-            EventCardInfo ci = new EventCardInfo();
+            EventCard ci = new EventCard();
             ci.name = "test" + i;
             ci.description = "description";
             if (i%2 == 0) {
