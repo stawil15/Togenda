@@ -8,5 +8,5 @@ import android.graphics.Color;
 public class EventCardInfo {
     protected String name;
     protected String description;
-    protected Color color;
+    protected int color;
 }

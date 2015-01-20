@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -34,6 +36,7 @@ public class MainActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +46,14 @@ public class MainActivity extends Activity
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
+        context = this.getApplicationContext();
+
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        //getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        //getActionBar().hide();
 
     }
 
@@ -165,7 +170,7 @@ public class MainActivity extends Activity
         }
     }
 
-    private static  List<EventCardInfo> getCards() {
+    private static List<EventCardInfo> getCards() {
 
         List<EventCardInfo> result = new ArrayList<EventCardInfo>();
 
@@ -173,7 +178,12 @@ public class MainActivity extends Activity
             EventCardInfo ci = new EventCardInfo();
             ci.name = "test" + i;
             ci.description = "description";
-
+            if (i%2 == 0) {
+                ci.color = context.getResources().getColor(R.color.gCal12);
+            }
+            else{
+                ci.color = context.getResources().getColor(R.color.gCal2);
+            }
             result.add(ci);
 
         }

@@ -9,13 +9,16 @@
         <!--   theme UI controls like checkboxes and text fields -->
         <item name="android:colorAccent">@color/primary</item>
 
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <item name="android:navigationBarColor">@color/dark</item>
 
         <item name="floatingActionButtonColor">@color/primary</item>
+
     </style>
 
     <style name="AppTheme.Fab" parent="FloatingActionButton">
         <item name="floatingActionButtonColor">@color/primary</item>
     </style>
+
+
 </resources>
