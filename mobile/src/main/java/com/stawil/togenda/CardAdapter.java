@@ -10,10 +10,10 @@ import java.util.List;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolder> {
 
-    private List<EventCard> eventList;
+    private List<GenericCard>eventList;
 
-    public CardAdapter(List<EventCard> contactList) {
-        this.eventList = contactList;
+    public CardAdapter(List<GenericCard> CardList) {
+        this.eventList = CardList;
     }
 
     @Override
@@ -24,11 +24,17 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolde
     @Override
     public void onBindViewHolder(EventViewHolder eventViewHolder, int i) {
 
-        EventCard ci = eventList.get(i);
-        eventViewHolder.name.setText(ci.name);
-        eventViewHolder.description.setText(ci.description);
-        View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);
-        cv.setBackgroundColor(ci.color);
+        //if(eventList.get(i).getType().equals("Event")){
+
+            EventCard ci = (EventCard) eventList.get(i);
+            eventViewHolder.name.setText(ci.name);
+            eventViewHolder.description.setText(ci.description);
+            View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);
+            cv.setBackgroundColor(ci.color);
+
+        //}
+
+
 
         //Color color = cv.getBackground();
         //cc.setBackgroundColor();

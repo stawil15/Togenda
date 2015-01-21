@@ -165,9 +165,9 @@ public class MainActivity extends Activity
         }
     }
 
-    private static List<EventCard> getCards() {
+    private static List<GenericCard> getCards() {
 
-        List<EventCard> result = new ArrayList<EventCard>();
+        List<GenericCard> result = new ArrayList<GenericCard>();
 
         for (int i=1; i <= 60; i++) {
             EventCard ci = new EventCard();
