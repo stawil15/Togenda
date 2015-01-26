@@ -63,6 +63,7 @@ public class MainActivity extends Activity
     }
 
     public void onSectionAttached(int number) {
+        //Navigation Bar titles
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
@@ -148,11 +149,12 @@ public class MainActivity extends Activity
 
             LinearLayoutManager llm = new LinearLayoutManager(c);
             llm.setOrientation(LinearLayoutManager.VERTICAL);
+            //initialize recyclerview
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(llm);
+            //set cardadaptor.
             CardAdapter ca = new CardAdapter(getCards());
             recyclerView.setAdapter(ca);
-
 
             return view;
         }
@@ -166,6 +168,8 @@ public class MainActivity extends Activity
     }
 
     private static List<GenericCard> getCards() {
+
+        //Creates initial card list.
 
         List<GenericCard> result = new ArrayList<GenericCard>();
 

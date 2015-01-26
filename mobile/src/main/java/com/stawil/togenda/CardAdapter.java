@@ -23,35 +23,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolde
 
     @Override
     public void onBindViewHolder(EventViewHolder eventViewHolder, int i) {
-
-        //if(eventList.get(i).getType().equals("Event")){
-
             EventCard ci = (EventCard) eventList.get(i);
             eventViewHolder.name.setText(ci.name);
             eventViewHolder.description.setText(ci.description);
-            View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);
+            View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);//card linearlayout
             cv.setBackgroundColor(ci.color);
-
-        //}
-
-
-
-        //Color color = cv.getBackground();
-        //cc.setBackgroundColor();
-
-
-        //eventViewHolder.
-        //rl = (RelativeLayout) this.findViewById(R.id.rellay);
-
-//        if ( == eventList.size() - 1 && mCurrentPage <= mTotalPageCount) {
-////            if (mCurrentPage == mTotalPageCount) {
-////                mLoadImagesListener.noMorePages();
-////            } else {
-////                int newPage = mCurrentPage + 1;
-////                mLoadImagesListener.loadPage(newPage);
-////            }
-//        }
-
     }
 
 
