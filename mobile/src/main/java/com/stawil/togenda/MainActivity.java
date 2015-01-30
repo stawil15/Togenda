@@ -173,10 +173,15 @@ public class MainActivity extends Activity
 
         List<GenericCard> result = new ArrayList<GenericCard>();
 
-        for (int i=1; i <= 60; i++) {
-            EventCard ci = new EventCard();
-            ci.name = "test" + i;
-            ci.description = "description";
+        //Example cards for screenshots here
+        result.add(new EventCard("Important meeting", "businuss stuff"));
+        result.add(new EventCard("do stuff", "seriously, get it done"));
+        result.add(new EventCard("Greg's Birthday Party", "Buy gift"));
+
+
+
+        for (int i=1; i <= 30; i++) {
+            EventCard ci = new EventCard("Test Event", "Description");
             if (i%2 == 0) {
                 ci.color = context.getResources().getColor(R.color.gCal12);
             }

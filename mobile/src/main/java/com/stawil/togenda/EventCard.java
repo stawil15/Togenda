@@ -7,4 +7,15 @@ import android.graphics.Color;
  */
 public class EventCard extends GenericCard{
 
+    public EventCard(String title, String description){
+        this.title = title;
+        this.description = description;
+    }
+    public EventCard(String title, String description, long startTime, long endTime, int c){
+        this.title = title;
+        this.description = description;
+        this.starttime = startTime;
+        this.endtime = endTime;
+        this.color = c;
+    }
 }

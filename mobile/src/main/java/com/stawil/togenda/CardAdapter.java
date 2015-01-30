@@ -24,7 +24,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.EventViewHolde
     @Override
     public void onBindViewHolder(EventViewHolder eventViewHolder, int i) {
             EventCard ci = (EventCard) eventList.get(i);
-            eventViewHolder.name.setText(ci.name);
+            eventViewHolder.name.setText(ci.title);
             eventViewHolder.description.setText(ci.description);
             View cv = eventViewHolder.itemView.findViewById(R.id.cardBack);//card linearlayout
             cv.setBackgroundColor(ci.color);
