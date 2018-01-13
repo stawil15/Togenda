@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.stawil.togenda.MainActivity">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <FrameLayout
+        android:id="@+id/view_frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/view_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="@dimen/view_size_normal"
+        android:layout_height="@dimen/view_size_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:src="@drawable/ic_add"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/view_navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/view_navigation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/view_size_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_item_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_navigation_agenda" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_item_todo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_navigation_todo" />
+    </android.support.design.widget.TabLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Togenda</string>
+    <string name="tab_navigation_agenda">Agenda</string>
+    <string name="tab_navigation_todo">Todo</string>
+
+    <string name="settings_label">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
