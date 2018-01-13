@@ -1,9 +1,9 @@
 package com.stawil.togenda
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.TabLayout
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
@@ -11,7 +11,6 @@ import android.widget.FrameLayout
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
-import com.stawil.togenda.togenda.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,10 +38,14 @@ class MainActivity : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when (tab.position) {
                     0 -> {
-
+                        supportFragmentManager.beginTransaction()
+                                .replace(frameLayout.id, AgendaFragment.newInstance())
+                                .commit()
                     }
                     1 -> {
-
+                        supportFragmentManager.beginTransaction()
+                                .replace(frameLayout.id, TodoFragment.newInstance())
+                                .commit()
                     }
                 }
             }
@@ -69,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.getItemId()) {
+        when (item.itemId) {
             R.id.action_settings -> {
                 //todo: add setings menu
                 return true
